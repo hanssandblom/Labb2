@@ -68,13 +68,13 @@ public class CalculatorTest {
         TextProcessor textProcessor = new TextProcessor ();
         String str = textProcessor.textToLower("Hans");
         System.out.println("test string " + str);
-        String regex = "^[A-Z0-9]+$";
+        String regex = "[A-Z]+";
         Pattern p = Pattern.compile(regex);
         Matcher m = p.matcher(str);
         if (m.matches())
-            assertTrue( true, "This test will work");
+            assertTrue( true, "Test include capital letters");
         else
-            assertFalse( false, "This test will NOT work");
+            assertFalse( false, "Test include no capital letters");
     }
 
     @Test
